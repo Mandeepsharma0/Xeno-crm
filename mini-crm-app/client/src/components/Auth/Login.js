@@ -8,7 +8,7 @@ const Login = ({ onLogin }) => {
   useEffect(() => {
     const checkAuthStatus = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/auth/status', {
+        const response = await fetch('https://crm-server-qfv6.onrender.com/api/auth/status', {
           credentials: 'include'
         });
         const data = await response.json();
@@ -25,7 +25,7 @@ const Login = ({ onLogin }) => {
   }, [onLogin, navigate]);
 
   const handleGoogleLogin = () => {
-    window.location.href = 'http://localhost:3001/api/auth/google';
+    window.location.href = 'https://crm-server-qfv6.onrender.com/api/auth/google';
   };
 
   return (
